@@ -75,7 +75,18 @@
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="assets/js/custom.js"></script>
     <script>hljs.highlightAll();</script>
+    <!-- Include Mastodon Timeline JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@idotj/mastodon-embed-timeline@4.4.2/dist/mastodon-timeline.umd.js" integrity="sha256-E6WPG6iq+qQIzvu3HPJJxoAeRdum5siq13x4ITjyxu8=" crossorigin="anonymous"></script>
+
+    <!-- Initialize Mastodon Timeline -->
+    <script>
+        const myTimeline = new MastodonTimeline.Init({
+            instanceUrl: "https://mastodon.online",
+            timelineType: "profile",
+            userId: "000180745",
+            profileName: "@idotj",
+        });
+    </script>
 </body>
 
 </html>
