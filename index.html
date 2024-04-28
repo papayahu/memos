@@ -12,6 +12,7 @@
     <link href="assets/css/highlight.github.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css">
     <title>Memos Top</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@idotj/mastodon-embed-timeline@4.4.2/dist/mastodon-timeline.min.css" integrity="sha256-1UGgxsonaMCfOEnVOL89aMKSo3GEAmaRP0ISbsWa6lU=" crossorigin="anonymous">
 
 </head>
 
@@ -34,30 +35,12 @@
     <section id="main" class="container">
         <h1>Memos Top</h1>
 
-        <blockquote>
-            <p>Je <del>memos</del>, donc je suis - <em>René Descartes fans</em></p>
-        </blockquote>
-        <blockquote>
-            <p>測試 <del>早安</del>, 午安 - <em>晚安</em></p>
-        </blockquote>
-        
-        </br>
-
-        <p>測試 <del>早安</del>, 午安 - <em>晚安</em></p>
-        
-        <div class="total">Total <span id="total">0</span> Memos 🎉</div>
-
-        <blockquote id="tag-filter" class="filter">
-            <div id="tags"></div>
-        </blockquote>
-
-        <div id="memos" class="memos">
-   剛剛去倒垃圾時，雙線道馬路離我較遠的那一側，發出「碰！」一聲巨響，只見幾條黑色的物體瘋狂抽搐、向上扭動...原來那是被撞的黑貓的四肢。
-</br>
-   那時候一輛汽車經過，一隻貓快速的跑走了，但另一隻閃避不及，從不停掙扎...到慢慢失去僅存的最後一絲氣息。
-</br>
-   馬路旁等垃圾車的住戶們都議論紛紛，為逝去的那條小生命惋惜。心底悄悄地希望，當自己開車上路，別爲了一時逞快或疏忽大意，讓其他的小小生命犧牲自己。
+    <!-- Mastodon Timeline Container -->
+    <div id="mt-container" class="mt-container">
+        <div class="mt-body" role="feed">
+            <div class="mt-loading-spinner"></div>
         </div>
+    </div>
 
     </section>
 
@@ -71,16 +54,7 @@
 
     </footer>
 
-    <!-- Your Memos API -->
-    <script type="text/javascript">
-        var memos = {
-            host: 'https://papayahu.github.io/memos/',  // Your Memos instance.
-            limit: '10',  // Pagination to show.
-            creatorId: '1',  // The old instance is 101, and the new instance is 1. 
-            domId: '#memos',  // Default #memos.
-            username: 'papayahu',  // You can customize the display ID that is not related to memos.
-            name: '木瓜的Memos',  // You can customize the displayed full name, that is not related to memos.
-        }
+   
 
     </script>
     <script type="text/javascript" src="assets/js/lazyload.min.js?v=17.8.3"></script>
@@ -101,6 +75,7 @@
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="assets/js/custom.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="https://cdn.jsdelivr.net/npm/@idotj/mastodon-embed-timeline@4.4.2/dist/mastodon-timeline.umd.js" integrity="sha256-E6WPG6iq+qQIzvu3HPJJxoAeRdum5siq13x4ITjyxu8=" crossorigin="anonymous"></script>
 </body>
 
 </html>
